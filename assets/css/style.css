@@ -398,6 +398,13 @@ section .container {
     color: #18d26e;
 }
 
+#pic {
+    padding-top: 60px;
+    padding-left: 40px;
+    max-height: 350px;
+    border-radius: 50%;
+}
+
 .about-me .content ul {
     list-style: none;
     padding: 0;
