@@ -1,0 +1,47 @@
+A passionate individual who always thrive to work on end to end products which develop sustainable and scalable social and technical systems to create impact.
+
+Work
+Work, Internship and Volunteership
+I have worked with many evolving startups as ML and DL Developer, Designer and Software Architect. I have also worked with some well established companies mostly as AI Developer. 
+I love organising events and that is why I am also involved with many opensource communities as a representative.
+
+Projects
+My projects makes use of vast variety of latest technology tools. My best experience is to create Data Science projects and deploy them to web applications using cloud infrastructure.
+
+
+DS & ML
+Developing highly scalable production ready models for various deeplearning and statistical use cases
+
+⚡ Experience of working with Computer Vision and NLP projects
+
+⚡ Complex quantitative modelling for dynamic forecasting and time series analysis
+
+Full Stack
+ Building resposive website front end using React-Redux
+
+⚡ Developing mobile applications using Flutter, React Native and solo android apps using Kotlin
+
+⚡ Creating application backend in Node, Express & Flask
+
+Cloud
+Experience working on multiple cloud platforms
+
+⚡ Hosting and maintaining websites on virtual machine instances along with integration of databases
+
+⚡ Deploying deep learning models on cloud to use on mobile devices
+
+⚡ Setting up streaming jobs from DB to Server or vice-versa on GCP and AWS
+
+Designing highly attractive user interface for mobile and web applications
+
+⚡ Customizing logo designs and building logos from scratch
+
+⚡ Creating the flow of application functionalities to optimize user experience
+
+
+ I was selected for Merit cum Means Scholarship which is given to top 10% of students in college. 
+I have received award from respected director for consistently best performance in academics.
+
+
+Blog
+For individual fundamental empowerment, I like to write powerful lessons that create impact on each of the reader individually to change the core of their character.
