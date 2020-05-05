@@ -60,11 +60,11 @@ h6 {
 }
 
 #header h1 {
-    font-size: 50px;
+    font-size: 65px;
     margin: 0;
     padding: 0;
     line-height: 1;
-    font-weight: 700;
+    font-weight: 600;
     font-family: "Poppins", sans-serif;
 }
 
@@ -298,7 +298,7 @@ h6 {
 
 #header.header-top h1 {
     margin-right: auto;
-    font-size: 36px;
+    font-size: 30px;
 }
 
 #header.header-top .container {
@@ -315,7 +315,7 @@ h6 {
         height: 60px;
     }
     #header.header-top h1 {
-        font-size: 26px;
+        font-size: 23px;
     }
 }
 
