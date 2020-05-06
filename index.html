@@ -583,7 +583,7 @@
                     <div class="portfolio-wrap">
                         <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
                         <div class="portfolio-info">
-                            <h4>Web 3</h4>
+                            <h4>Data Science Community SRM</h4>
                             <p>Web</p>
                             <div class="portfolio-links">
                                 <a href="assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
@@ -709,14 +709,39 @@
 
             <div class="row">
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                    <div class="icon-box">
-                        <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                        <h4><a href="">Machine Learning</a></h4>
-                        <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-                    </div>
-                </div>
+                    <!-- <div class="row"> -->
+                    <div id="medium-widget"></div>
+                    <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
+                    <script>
+                        MediumWidget.Init({
+                            renderTo: '#medium-widget',
+                            params: {
+                                "resource": "https://medium.com/@bhandari.hritik",
+                                "postsPerLine": 2,
+                                "limit": 4,
+                                "picture": "big",
+                                "fields": ["description", "author", "claps", "publishAt"],
+                                "ratio": "landscape"
+                            }
+                        })
+                    </script>
 
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                </div>
+            </div>
+
+
+
+
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                <div class="icon-box">
+                    <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                    <h4><a href="">Machine Learning</a></h4>
+                    <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                </div>
+            </div>
+
+            <!--<div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
                     <div class="icon-box">
                         <div class="icon"><i class="bx bx-file"></i></div>
                         <h4><a href="">Sed ut perspiciatis</a></h4>
@@ -754,9 +779,9 @@
                         <h4><a href="">Divera don</a></h4>
                         <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
                     </div>
-                </div>
+                </div> -->
 
-            </div>
+            <!-- </div> -->
 
         </div>
     </section>
