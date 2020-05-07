@@ -691,6 +691,10 @@ section .container {
 # Services
 --------------------------------------------------------------*/
 
+#medium-widget {
+    display: flexbox;
+}
+
 .services .icon-box {
     text-align: center;
     background: rgba(204, 204, 204, 0.1);
@@ -747,8 +751,8 @@ section .container {
 }
 
 .services .icon-box:hover {
-    background: #bb86fc;
-    border-color: #bb86fc;
+    background: #513c6b;
+    border-color: #513c6b;
 }
 
 .services .icon-box:hover .icon {
@@ -756,11 +760,11 @@ section .container {
 }
 
 .services .icon-box:hover .icon i {
-    color: #bb86fc;
+    color: ##513c6b;
 }
 
 .services .icon-box:hover .icon::before {
-    background: #bb86fc;
+    background: #513c6b;
 }
 
 .services .icon-box:hover h4 a,

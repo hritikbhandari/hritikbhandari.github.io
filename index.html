@@ -36,12 +36,11 @@
     <!-- ======= Header ======= -->
     <header id="header" class="header-tops">
         <div class="container">
-            <h2 id="greeting" style="font-size: 20px; color: #bb86fc;">Hi, my name is</h2>
+            <h2 id="greeting" style="font-size: 20px; color: #bb86fc;"> Hi, my name is</h2>
             <h1><a href="index.html">Hritik Bhandari.</a></h1>
-            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- Uncomment to use an image logo -->
             <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-            <!--<h2>I'm a passionate <span>graphic designer</span> from New York</h2>-->
             <h2>I am a
                 <span class="txt-rotate" data-period="1000" data-rotate='[ " CSE undergrad.", " Machine Learning Enthusiast. ", " Data Analyst.", "Web Developer.", "Flutter Developer" ]'>
           </span>
@@ -542,8 +541,8 @@
                 <div class="col-lg-12 d-flex justify-content-center">
                     <ul id="portfolio-flters">
                         <li data-filter="*" class="filter-active">All</li>
-                        <li data-filter=".filter-app">EDA</li>
-                        <li data-filter=".filter-card">Ml and Dl</li>
+                        <li data-filter=".filter-EDA">EDA</li>
+                        <li data-filter=".filter-ML">Ml and Dl</li>
                         <li data-filter=".filter-web">Web</li>
                     </ul>
                 </div>
@@ -551,29 +550,44 @@
 
             <div class="row portfolio-container">
 
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                <div class="col-lg-4 col-md-6 portfolio-item filter-EDA">
                     <div class="portfolio-wrap">
                         <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
                         <div class="portfolio-info">
-                            <h4>App 1</h4>
-                            <p>App</p>
+                            <h4>Coronavirus EDA with Python</h4>
+                            <p>This is an EDA of Coronavirus dataset available from the Johns Hopkins University using python libraries and Altair for interactive and insightful analysis.
+                            </p>
                             <div class="portfolio-links">
-                                <a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox" title="App 1"><i class="bx bx-plus"></i></a>
+                                <a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox" title="EDA 1"><i class="bx bx-plus"></i></a>
+                                <a href="https://github.com/hritikbhandari/Exploratory-Data-Analysis-of-COVID19-with-python" title="Check Out"><i class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-ML">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/portfolio/neuralstyletransfer.png" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Neural Style Transfer</h4>
+                            <p>Using Tensorflow to implement neural style transfer from feature image to content image.</p>
+                            <div class="portfolio-links">
+                                <a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox" title="EDA 3"><i class="bx bx-plus"></i></a>
                                 <a href="#" title="More Details"><i class="bx bx-link"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                <div class="col-lg-4 col-md-6 portfolio-item filter-EDA">
                     <div class="portfolio-wrap">
                         <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
                         <div class="portfolio-info">
-                            <h4>App 1</h4>
-                            <p>App</p>
+                            <h4>COVID 19 Visualizations</h4>
+                            <p>Using R and its libraries to visualize COVID 19 data.</p>
                             <div class="portfolio-links">
                                 <a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox" title="App 1"><i class="bx bx-plus"></i></a>
-                                <a href="#" title="More Details"><i class="bx bx-link"></i></a>
+                                <a href="https://github.com/hritikbhandari/Visualizing-COVID19-with-R" title="Details"><i class="bx bx-link"></i></a>
                             </div>
                         </div>
                     </div>
@@ -581,10 +595,10 @@
 
                 <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                     <div class="portfolio-wrap">
-                        <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+                        <img src="assets/img/portfolio/portfolio-2.1.jpg" class="img-fluid" alt="">
                         <div class="portfolio-info">
                             <h4>Data Science Community SRM</h4>
-                            <p>Web</p>
+                            <p>Developed the official website for the Data Science Community SRM</p>
                             <div class="portfolio-links">
                                 <a href="assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
                                 <a href="#" title="More Details"><i class="bx bx-link"></i></a>
@@ -593,25 +607,13 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                    <div class="portfolio-wrap">
-                        <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h4>App 2</h4>
-                            <p>App</p>
-                            <div class="portfolio-links">
-                                <a href="assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox" title="App 2"><i class="bx bx-plus"></i></a>
-                                <a href="#" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-ML">
                     <div class="portfolio-wrap">
                         <img src="assets/img/portfolio/portfolio-4.png" class="img-fluid" alt="">
                         <div class="portfolio-info">
-                            <h4>Card 2</h4>
+                            <h4>LEXICON</h4>
                             <p>Card</p>
                             <div class="portfolio-links">
                                 <a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox" title="Card 2"><i class="bx bx-plus"></i></a>
@@ -621,35 +623,37 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                <div class="col-lg-4 col-md-6 portfolio-item filter-ML">
                     <div class="portfolio-wrap">
-                        <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+                        <img src="assets/img/portfolio/fakenews2.png" class="img-fluid" alt="">
                         <div class="portfolio-info">
-                            <h4>Web 2</h4>
+                            <h4>Fake News Classifier</h4>
                             <p>Web</p>
                             <div class="portfolio-links">
-                                <a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox" title="Web 2"><i class="bx bx-plus"></i></a>
+                                <a href="assets/img/portfolio/fakenews2.png" data-gall="portfolioGallery" class="venobox" title="Web 2"><i class="bx bx-plus"></i></a>
                                 <a href="#" title="More Details"><i class="bx bx-link"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                     <div class="portfolio-wrap">
-                        <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+                        <img src="assets/img/portfolio/Find My Course.png" class="img-fluid" alt="">
                         <div class="portfolio-info">
-                            <h4>App 3</h4>
-                            <p>App</p>
+                            <h4>Find My Course</h4>
+                            <p>A webapp/search engine to suggest online courses from various Online Course providing websites like Coursera, DataCamp, EdX, Udemy etc.</p>
                             <div class="portfolio-links">
-                                <a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox" title="App 3"><i class="bx bx-plus"></i></a>
+                                <a href="assets/img/portfolio/Find My Course.png" data-gall="portfolioGallery" class="venobox" title="App 2"><i class="bx bx-plus"></i></a>
                                 <a href="#" title="More Details"><i class="bx bx-link"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+
+
+                <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-card">
                     <div class="portfolio-wrap">
                         <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
                         <div class="portfolio-info">
@@ -689,7 +693,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
             </div>
 
@@ -707,41 +711,34 @@
                 <p>Blogs</p>
             </div>
 
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="icon-box">
-                        <!-- <div class="row"> -->
-                        <div id="medium-widget"></div>
-                        <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
-                        <script>
-                            MediumWidget.Init({
-                                renderTo: '#medium-widget',
-                                params: {
-                                    "resource": "https://medium.com/@bhandari.hritik",
-                                    "postsPerLine": 2,
-                                    "limit": 4,
-                                    "picture": "big",
-                                    "fields": ["description", "author", "claps", "publishAt"],
-                                    "ratio": "landscape"
-                                }
-                            })
-                        </script>
-                    </div>
 
-                </div>
-            </div>
+            <div id="medium-widget"></div>
+            <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
+            <script>
+                MediumWidget.Init({
+                    renderTo: '#medium-widget',
+                    params: {
+                        "resource": "https://medium.com/@bhandari.hritik",
+                        "postsPerLine": 2,
+                        "limit": 4,
+                        "picture": "big",
+                        "fields": ["description", "author", "claps", "publishAt"],
+                        "ratio": "landscape"
+                    }
+                })
+            </script>
 
 
 
 
 
-            <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                 <div class="icon-box">
                     <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                    <h4><a href="">Machine Learning</a></h4>
-                    <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                    <h4><a href="">Data Analysis with pandas 101</a></h4>
+                    <p>A complete intoduction to pandas library to kickstart your journey in Data Analysis!</p>
                 </div>
-            </div> -->
+            </div>
 
             <!--<div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
                     <div class="icon-box">
