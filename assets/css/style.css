@@ -8,7 +8,7 @@ body {
 body::before {
     content: "";
     position: fixed;
-    background: #040404 url("../img/bg.jpg") top right no-repeat;
+    background: #040404 url("../img/bg.png") top right no-repeat;
     background-size: cover;
     left: 0;
     right: 0;
@@ -46,7 +46,7 @@ h6 {
 --------------------------------------------------------------*/
 
 #header {
-    transition: ease-in-out 0.3s;
+    transition: ease-in-out 0.35s;
     position: relative;
     height: 100vh;
     display: flex;
@@ -87,22 +87,17 @@ h6 {
     padding-bottom: 6px;
 }
 
-#header img {
-    padding: 0;
-    margin: 0;
-}
-
 #header .social-links {
     margin-top: 40px;
     display: flex;
 }
 
 #header .social-links a {
-    font-size: 25px;
+    font-size: 26px;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background: rgba(255, 255, 255, 0.1); */
+    /* background: */
     color: #fff;
     /* line-height: 1; */
     margin-right: 8px;
@@ -112,19 +107,20 @@ h6 {
 }
 
 #header .social-links a:hover {
+    color: #121212;
     background: #bb86fc;
 }
 
 @media (max-width: 992px) {
     #header h1 {
-        font-size: 36px;
+        font-size: 40px;
     }
     #header h2 {
-        font-size: 20px;
+        font-size: 23px;
         line-height: 30px;
     }
     #header .social-links {
-        margin-top: 15px;
+        margin-top: 17px;
     }
     #header .container {
         display: flex;
@@ -197,8 +193,8 @@ h6 {
 
 .mobile-nav-toggle {
     position: fixed;
-    right: 15px;
-    top: 15px;
+    right: 18px;
+    top: 18px;
     z-index: 9998;
     border: 0;
     background: none;
