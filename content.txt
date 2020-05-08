@@ -5,8 +5,6 @@ Work, Internship and Volunteership
 I have worked with many evolving startups as ML and DL Developer, Designer and Software Architect. I have also worked with some well established companies mostly as AI Developer. 
 I love organising events and that is why I am also involved with many opensource communities as a representative.
 
-Projects
-My projects makes use of vast variety of latest technology tools. My best experience is to create Data Science projects and deploy them to web applications using cloud infrastructure.
 
 
 DS & ML
@@ -42,6 +40,3 @@ Designing highly attractive user interface for mobile and web applications
  I was selected for Merit cum Means Scholarship which is given to top 10% of students in college. 
 I have received award from respected director for consistently best performance in academics.
 
-
-Blog
-For individual fundamental empowerment, I like to write powerful lessons that create impact on each of the reader individually to change the core of their character.
