@@ -397,11 +397,16 @@ section .container {
     color: #bb86fc;
 }
 
+@media (min-width: 768px) {
+    #pic {
+        margin-top: 60px;
+        max-height: 320px;
+    }
+}
+
 #pic {
-    padding-top: 60px;
-    padding-left: 40px;
-    max-height: 350px;
     border-radius: 50%;
+    max-height: 300px;
 }
 
 .about-me .content ul {
@@ -410,7 +415,7 @@ section .container {
 }
 
 .about-me .content ul li {
-    padding-bottom: 10px;
+    padding-bottom: 1px;
 }
 
 .about-me .content ul i {
@@ -510,6 +515,45 @@ a.button4:hover {
 
 
 /*--------------------------------------------------------------
+# Skills
+--------------------------------------------------------------*/
+
+.skills .progress {
+    height: 50px;
+    display: block;
+    background: none;
+}
+
+.skills .progress .skill {
+    padding-bottom: 5px;
+    margin: 0 0 2px 0;
+    text-transform: uppercase;
+    /* display: block; */
+    font-weight: 500;
+    font-size: small;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+}
+
+.skills .progress .skill .val {
+    float: right;
+    font-style: normal;
+}
+
+.skills .progress-bar-wrap {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.skills .progress-bar {
+    margin-bottom: 20px;
+    width: 1px;
+    height: 10px;
+    transition: .9s;
+    background-color: #bb86fc;
+}
+
+
+/*--------------------------------------------------------------
 # Counts
 --------------------------------------------------------------*/
 
@@ -549,43 +593,6 @@ a.button4:hover {
     margin: 0;
     font-family: "Raleway", sans-serif;
     font-size: 14px;
-}
-
-
-/*--------------------------------------------------------------
-# Skills
---------------------------------------------------------------*/
-
-.skills .progress {
-    height: 50px;
-    display: block;
-    background: none;
-}
-
-.skills .progress .skill {
-    padding: 0;
-    margin: 0 0 6px 0;
-    text-transform: uppercase;
-    display: block;
-    font-weight: 600;
-    font-family: "Poppins", sans-serif;
-    color: #fff;
-}
-
-.skills .progress .skill .val {
-    float: right;
-    font-style: normal;
-}
-
-.skills .progress-bar-wrap {
-    background: rgba(255, 255, 255, 0.15);
-}
-
-.skills .progress-bar {
-    width: 1px;
-    height: 10px;
-    transition: .9s;
-    background-color: #bb86fc;
 }
 
 
