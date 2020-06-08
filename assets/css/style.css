@@ -1,14 +1,14 @@
 body {
     font-family: "Open Sans", sans-serif;
     color: #fff;
-    /* position: relative;
-    background: transparent; */
+    position: relative;
+    background: transparent;
 }
 
 body::before {
     content: "";
     position: fixed;
-    background: #040404 url("../img/bg2.png") top right no-repeat;
+    background: #040404 top right no-repeat;
     /* background: #040404 url("../img/bg2.png") top right no-repeat; */
     background-size: cover;
     left: 0;
@@ -1142,6 +1142,10 @@ a.button4:hover {
     font-size: 13px;
     color: #fff;
     z-index: 1;
+}
+
+.credits i {
+    color: #bb86fc;
 }
 
 .credits a {
