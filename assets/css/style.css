@@ -8,7 +8,7 @@ body {
 body::before {
     content: "";
     position: fixed;
-    background: #040404 top right no-repeat;
+    background: #040404fa top right no-repeat;
     /* background: #040404 url("../img/bg2.png") top right no-repeat; */
     background-size: cover;
     left: 0;
