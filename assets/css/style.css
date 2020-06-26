@@ -214,7 +214,7 @@ h6 {
     z-index: 9998;
     border: 0;
     background: none;
-    font-size: 24px;
+    font-size: 26px;
     transition: all 0.4s;
     outline: none !important;
     line-height: 1;
@@ -627,6 +627,34 @@ a.button4:hover {
     position: relative;
 }
 
+.experience .experience-item .expimg {
+    width: 200px;
+    margin-right: 15px;
+}
+
+@media (min-width: 768px) {
+    #smartbridge {
+        width: 350px;
+    }
+    #csea {
+        width: 180px;
+    }
+    #rtr {
+        width: 250px;
+    }
+    #aaruush {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .experience .experience-item .expimg {
+        width: 150px;
+        margin-top: 0px;
+        margin-right: 40px;
+    }
+}
+
 .experience .experience-item h4 {
     line-height: 18px;
     font-size: 18px;
@@ -644,6 +672,12 @@ a.button4:hover {
     display: inline-block;
     font-weight: 600;
     margin-bottom: 10px;
+}
+
+@media ( max-width: 768px) {
+    .experience .experience-item h5 {
+        margin-top: 15px;
+    }
 }
 
 
