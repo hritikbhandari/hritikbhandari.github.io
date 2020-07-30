@@ -3,46 +3,46 @@
 
 
     // Nav Menu
-    $(document).on('click', '.nav-menu a, .mobile-nav a', function(e) {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-            var hash = this.hash;
-            var target = $(hash);
-            if (target.length) {
-                e.preventDefault();
+    // $(document).on('click', '.nav-menu a, .mobile-nav a', function(e) {
+    //     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    //         var hash = this.hash;
+    //         var target = $(hash);
+    //         if (target.length) {
+    //             e.preventDefault();
 
-                if ($(this).parents('.nav-menu, .mobile-nav').length) {
-                    $('.nav-menu .active, .mobile-nav .active').removeClass('active');
-                    $(this).closest('li').addClass('active');
-                }
+    //             if ($(this).parents('.nav-menu, .mobile-nav').length) {
+    //                 $('.nav-menu .active, .mobile-nav .active').removeClass('active');
+    //                 $(this).closest('li').addClass('active');
+    //             }
 
-                if (hash == '#header') {
-                    $('#header').removeClass('header-top');
-                    $("section").removeClass('section-show');
-                    return;
-                }
+    //             if (hash == '#header') {
+    //                 $('#header').removeClass('header-top');
+    //                 $("section").removeClass('section-show');
+    //                 return;
+    //             }
 
-                if (!$('#header').hasClass('header-top')) {
-                    $('#header').addClass('header-top');
-                    setTimeout(function() {
-                        $("section").removeClass('section-show');
-                        $(hash).addClass('section-show');
-                    }, 350);
-                } else {
-                    $("section").removeClass('section-show');
-                    $(hash).addClass('section-show');
-                }
+    //             if (!$('#header').hasClass('header-top')) {
+    //                 $('#header').addClass('header-top');
+    //                 setTimeout(function() {
+    //                     $("section").removeClass('section-show');
+    //                     $(hash).addClass('section-show');
+    //                 }, 350);
+    //             } else {
+    //                 $("section").removeClass('section-show');
+    //                 $(hash).addClass('section-show');
+    //             }
 
-                if ($('body').hasClass('mobile-nav-active')) {
-                    $('body').removeClass('mobile-nav-active');
-                    $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
-                    $('.mobile-nav-overly').fadeOut();
-                }
+    //             if ($('body').hasClass('mobile-nav-active')) {
+    //                 $('body').removeClass('mobile-nav-active');
+    //                 $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
+    //                 $('.mobile-nav-overly').fadeOut();
+    //             }
 
-                return false;
+    //             return false;
 
-            }
-        }
-    });
+    //         }
+    //     }
+    // });
 
     // Mobile Navigation
     if ($('.nav-menu').length) {
@@ -91,24 +91,7 @@
         offset: '80%'
     });
 
-    // Testimonials carousel (uses the Owl Carousel library)
-    $(".testimonials-carousel").owlCarousel({
-        autoplay: true,
-        dots: true,
-        loop: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            768: {
-                items: 2
-            },
-            900: {
-                items: 3
-            }
-        }
-    });
-
+    
     // Porfolio isotope and filter
     $(window).on('load', function() {
         var portfolioIsotope = $('.portfolio-container').isotope({

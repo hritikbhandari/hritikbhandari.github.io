@@ -338,11 +338,11 @@ h6 {
 
 section {
     overflow: hidden;
-    position: absolute;
+    position: relative;
     width: 100%;
     top: 140px;
     bottom: 100%;
-    opacity: 0;
+    /* opacity: 0; */
     transition: ease-in-out 0.4s;
     z-index: 2;
 }
