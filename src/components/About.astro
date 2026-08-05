@@ -1,0 +1,69 @@
+---
+import SectionHeading from './SectionHeading.astro';
+import TerminalWindow from './TerminalWindow.astro';
+import { profile } from '../data/resume';
+
+const focusAreas = [
+  {
+    key: 'identity_governance',
+    value: 'Certification, SoD, RBAC and approval workflow architecture at enterprise scale.',
+  },
+  {
+    key: 'platform_modernization',
+    value: 'Legacy-to-current migrations across runtimes, COTS products, and 76+ repositories.',
+  },
+  {
+    key: 'delivery_engineering',
+    value: 'CI/CD pipelines that replace scheduled manual releases with secure on-demand deploys.',
+  },
+  {
+    key: 'agentic_ai',
+    value: 'Copilot, Devin and MCP-driven workflows applied across the SDLC.',
+  },
+];
+---
+
+<section id="about" class="px-6 py-24">
+  <div class="mx-auto max-w-5xl">
+    <SectionHeading index="01" title="About" command="cat about.md" />
+
+    <div class="grid gap-8 lg:grid-cols-5">
+      <div class="reveal space-y-5 lg:col-span-3">
+        <p class="text-base leading-relaxed text-muted sm:text-lg">
+          I'm a Senior Software Engineer in Hyderabad working at the intersection of
+          <span class="text-ink">enterprise Java</span> and
+          <span class="text-ink">cybersecurity</span>. For the past four years I've built and owned
+          the identity governance systems at Wells Fargo — the platform deciding who gets access to
+          what, for how long, and with whose approval.
+        </p>
+        <p class="text-base leading-relaxed text-muted sm:text-lg">
+          That work spans core IAM modules serving
+          <span class="text-term">3.56M+ entitlements</span> and
+          <span class="text-term">260K+ identities</span>, connector ecosystems reaching from
+          Active Directory to mainframe, and pipelines processing nearly 200K reconciliation events
+          a day. More recently I've been leading modernization efforts — a 12c to 14c platform
+          upgrade, a Java 21 migration, and enterprise CI/CD — alongside a team of engineers.
+        </p>
+        <p class="text-base leading-relaxed text-muted sm:text-lg">
+          I care about systems that fail safely, governance that doesn't slow people down, and
+          using agentic AI tooling where it genuinely removes toil rather than adding ceremony.
+        </p>
+      </div>
+
+      <TerminalWindow label="focus.json" class="reveal lg:col-span-2">
+        <dl class="space-y-4 font-mono text-xs leading-relaxed sm:text-sm">
+          {
+            focusAreas.map((area) => (
+              <div>
+                <dt class="text-term">"{area.key}":</dt>
+                <dd class="pl-3 text-muted">"{area.value}"</dd>
+              </div>
+            ))
+          }
+        </dl>
+      </TerminalWindow>
+    </div>
+
+    <p class="sr-only">{profile.summary}</p>
+  </div>
+</section>

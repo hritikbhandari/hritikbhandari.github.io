@@ -1,0 +1,24 @@
+---
+interface Props {
+  index: string;
+  title: string;
+  command?: string;
+}
+
+const { index, title, command } = Astro.props;
+---
+
+<div class="reveal mb-10 flex flex-col gap-3">
+  <div class="flex items-center gap-4">
+    <span class="font-mono text-sm text-term">{index}</span>
+    <h2 class="font-mono text-2xl font-bold tracking-tight text-ink sm:text-3xl">{title}</h2>
+    <span class="section-rule" aria-hidden="true"></span>
+  </div>
+  {
+    command && (
+      <p class="font-mono text-xs text-faint sm:text-sm">
+        <span class="text-term-dim">$</span> {command}
+      </p>
+    )
+  }
+</div>

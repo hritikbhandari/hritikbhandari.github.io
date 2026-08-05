@@ -1,0 +1,29 @@
+---
+import SectionHeading from './SectionHeading.astro';
+import { skillGroups } from '../data/resume';
+---
+
+<section id="skills" class="px-6 py-24">
+  <div class="mx-auto max-w-5xl">
+    <SectionHeading index="02" title="Skills" command="ls -la ./stack" />
+
+    <div class="grid gap-5 md:grid-cols-2">
+      {
+        skillGroups.map((group) => (
+          <div class="reveal panel p-5">
+            <h3 class="font-mono text-xs tracking-widest text-term uppercase">
+              <span class="text-faint">./</span>
+              {group.slug}
+            </h3>
+            <p class="mt-1 mb-4 text-sm text-faint">{group.label}</p>
+            <ul class="flex flex-wrap gap-2">
+              {group.items.map((item) => (
+                <li class="tag">{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

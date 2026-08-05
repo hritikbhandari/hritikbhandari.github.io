@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.astro/
+.claude/settings.local.json
+.DS_Store
+.env
+.env.production
+npm-debug.log*

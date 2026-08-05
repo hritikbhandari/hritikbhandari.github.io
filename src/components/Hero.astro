@@ -1,0 +1,155 @@
+---
+import { profile, stats, terminalLines } from '../data/resume';
+import TerminalWindow from './TerminalWindow.astro';
+---
+
+<section id="top" class="relative flex min-h-svh items-center px-6 pt-28 pb-16">
+  <div class="mx-auto w-full max-w-5xl">
+    <p class="reveal font-mono text-sm text-term">$ ./init --profile</p>
+
+    <h1 class="reveal mt-5 text-4xl font-bold tracking-tight text-ink sm:text-6xl lg:text-7xl">
+      {profile.name}
+    </h1>
+
+    <p class="reveal mt-3 font-mono text-lg text-cyan sm:text-2xl">
+      {profile.title}<span class="text-faint"> @ </span><span class="text-ink">Wells Fargo</span>
+    </p>
+
+    <p class="reveal mt-5 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
+      Four years deep in enterprise identity and access management — designing the governance,
+      provisioning, and approval systems that decide who can reach what across a bank of hundreds of
+      thousands of identities.
+    </p>
+
+    <div class="reveal mt-7 flex flex-wrap items-center gap-3">
+      <a
+        href="#work"
+        class="rounded border border-term bg-term/10 px-5 py-2.5 font-mono text-sm text-term transition-colors hover:bg-term/20"
+      >
+        view work
+      </a>
+      <a
+        href={`mailto:${profile.email}`}
+        class="rounded border border-edge px-5 py-2.5 font-mono text-sm text-muted transition-colors hover:border-term hover:text-term"
+      >
+        contact
+      </a>
+      <span class="ml-1 font-mono text-xs text-faint">
+        <span class="mr-1.5 inline-block h-1.5 w-1.5 rounded-full bg-term align-middle"></span>
+        {profile.location}
+      </span>
+    </div>
+
+    <TerminalWindow label="hritik@portfolio — zsh" class="reveal mt-12 max-w-3xl">
+      <div
+        id="terminal-output"
+        class="min-h-44 font-mono text-xs leading-7 sm:min-h-40 sm:text-sm"
+        data-lines={JSON.stringify(terminalLines)}
+        aria-live="polite"
+      >
+      </div>
+      <noscript>
+        <div class="font-mono text-xs leading-7 sm:text-sm">
+          {
+            terminalLines.map((line) => (
+              <div>
+                <div>
+                  <span class="text-term">➜</span> <span class="text-cyan">~</span>{' '}
+                  <span class="text-ink">{line.command}</span>
+                </div>
+                <div class="text-muted">{line.output}</div>
+              </div>
+            ))
+          }
+        </div>
+      </noscript>
+    </TerminalWindow>
+
+    <dl class="reveal mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
+      {
+        stats.map((stat) => (
+          <div class="panel px-4 py-4">
+            <dt class="font-mono text-xs text-faint">{stat.label}</dt>
+            <dd class="mt-1 font-mono text-xl font-bold text-term sm:text-2xl">{stat.value}</dd>
+          </div>
+        ))
+      }
+    </dl>
+  </div>
+</section>
+
+<script>
+  type Line = { command: string; output: string };
+
+  const host = document.getElementById('terminal-output');
+  if (host) {
+    const lines: Line[] = JSON.parse(host.dataset.lines ?? '[]');
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const makeBlock = () => {
+      const block = document.createElement('div');
+      block.className = 'mb-2';
+
+      const prompt = document.createElement('div');
+      const arrow = document.createElement('span');
+      arrow.className = 'text-term';
+      arrow.textContent = '➜';
+      const tilde = document.createElement('span');
+      tilde.className = 'text-cyan';
+      tilde.textContent = '~';
+      const cmd = document.createElement('span');
+      cmd.className = 'text-ink';
+      prompt.append(arrow, document.createTextNode(' '), tilde, document.createTextNode(' '), cmd);
+
+      const out = document.createElement('div');
+      out.className = 'text-muted';
+
+      block.append(prompt, out);
+      return { block, cmd, out };
+    };
+
+    if (reduced) {
+      for (const line of lines) {
+        const { block, cmd, out } = makeBlock();
+        cmd.textContent = line.command;
+        out.textContent = line.output;
+        host.append(block);
+      }
+    } else {
+      const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
+      const type = async (el: HTMLElement, text: string, speed: number) => {
+        for (const char of text) {
+          el.textContent += char;
+          await wait(speed);
+        }
+      };
+
+      const run = async () => {
+        // eslint-disable-next-line no-constant-condition
+        while (true) {
+          host.textContent = '';
+          for (const line of lines) {
+            const { block, cmd, out } = makeBlock();
+            host.append(block);
+            cmd.classList.add('cursor-blink');
+            await type(cmd, line.command, 42);
+            await wait(260);
+            cmd.classList.remove('cursor-blink');
+            out.textContent = line.output;
+            await wait(620);
+          }
+          await wait(3800);
+        }
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          observer.disconnect();
+          run();
+        }
+      });
+      observer.observe(host);
+    }
+  }
+</script>

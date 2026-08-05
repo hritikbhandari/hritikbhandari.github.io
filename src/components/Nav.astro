@@ -1,0 +1,102 @@
+---
+import { navLinks, profile } from '../data/resume';
+---
+
+<header
+  id="site-nav"
+  class="fixed inset-x-0 top-0 z-40 border-b border-transparent transition-colors duration-300"
+>
+  <nav class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4" aria-label="Primary">
+    <a href="#top" class="font-mono text-sm font-bold text-ink">
+      <span class="text-term">~/</span>hritik
+    </a>
+
+    <ul class="hidden items-center gap-6 md:flex">
+      {
+        navLinks.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class="link-underline font-mono text-sm text-muted transition-colors hover:text-term"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <div class="flex items-center gap-3">
+      <a
+        href={`mailto:${profile.email}`}
+        class="hidden rounded border border-edge px-3 py-1.5 font-mono text-xs text-term transition-colors hover:border-term hover:bg-term/10 sm:inline-block"
+      >
+        get in touch
+      </a>
+      <button
+        id="nav-toggle"
+        type="button"
+        class="rounded border border-edge p-2 text-muted transition-colors hover:text-term md:hidden"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="3" y1="7" x2="21" y2="7"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="17" x2="21" y2="17"></line>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <div
+    id="mobile-menu"
+    class="hidden border-t border-edge bg-surface/95 backdrop-blur md:hidden"
+  >
+    <ul class="mx-auto flex max-w-5xl flex-col px-6 py-3">
+      {
+        navLinks.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class="block py-2.5 font-mono text-sm text-muted transition-colors hover:text-term"
+            >
+              <span class="text-term-dim">→</span> {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</header>
+
+<script>
+  const nav = document.getElementById('site-nav');
+  const toggle = document.getElementById('nav-toggle');
+  const menu = document.getElementById('mobile-menu');
+
+  const applyScrolledState = () => {
+    if (!nav) return;
+    const scrolled = window.scrollY > 24;
+    nav.classList.toggle('border-edge', scrolled);
+    nav.classList.toggle('bg-void/85', scrolled);
+    nav.classList.toggle('backdrop-blur', scrolled);
+  };
+
+  applyScrolledState();
+  window.addEventListener('scroll', applyScrolledState, { passive: true });
+
+  toggle?.addEventListener('click', () => {
+    if (!menu) return;
+    const open = menu.classList.toggle('hidden');
+    toggle.setAttribute('aria-expanded', String(!open));
+  });
+
+  menu?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      menu.classList.add('hidden');
+      toggle?.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>

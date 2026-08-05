@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hritikbhandari.github.io/sitemap-index.xml

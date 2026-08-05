@@ -1,0 +1,20 @@
+---
+interface Props {
+  label?: string;
+  class?: string;
+}
+
+const { label = 'zsh', class: className = '' } = Astro.props;
+---
+
+<div class={`panel overflow-hidden ${className}`}>
+  <div class="term-chrome">
+    <span class="term-dot bg-[#ff5f57]" aria-hidden="true"></span>
+    <span class="term-dot bg-[#febc2e]" aria-hidden="true"></span>
+    <span class="term-dot bg-[#28c840]" aria-hidden="true"></span>
+    <span class="ml-2 font-mono text-xs text-faint">{label}</span>
+  </div>
+  <div class="p-5 sm:p-6">
+    <slot />
+  </div>
+</div>

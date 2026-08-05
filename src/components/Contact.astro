@@ -1,0 +1,60 @@
+---
+import SectionHeading from './SectionHeading.astro';
+import TerminalWindow from './TerminalWindow.astro';
+import { profile } from '../data/resume';
+
+const channels = [
+  { label: 'email', value: profile.email, href: `mailto:${profile.email}` },
+  { label: 'linkedin', value: '/in/hritikbhandari', href: profile.linkedin },
+  { label: 'github', value: '/hritikbhandari', href: profile.github },
+  { label: 'location', value: profile.location, href: null },
+];
+---
+
+<section id="contact" class="px-6 py-24">
+  <div class="mx-auto max-w-5xl">
+    <SectionHeading index="06" title="Contact" command="./connect --open" />
+
+    <div class="grid items-start gap-8 lg:grid-cols-5">
+      <div class="reveal lg:col-span-3">
+        <p class="text-lg leading-relaxed text-muted sm:text-xl">
+          Open to conversations about identity engineering, platform modernization, and
+          security-critical backend systems — or anything interesting at that intersection.
+        </p>
+        <a
+          href={`mailto:${profile.email}`}
+          class="mt-7 inline-block rounded border border-term bg-term/10 px-6 py-3 font-mono text-sm text-term transition-colors hover:bg-term/20"
+        >
+          say hello →
+        </a>
+      </div>
+
+      <TerminalWindow label="contact.sh" class="reveal lg:col-span-2">
+        <dl class="space-y-3 font-mono text-xs sm:text-sm">
+          {
+            channels.map((channel) => (
+              <div class="flex flex-wrap items-baseline gap-x-2">
+                <dt class="text-term-dim">{channel.label}:</dt>
+                <dd class="min-w-0 break-all">
+                  {channel.href ? (
+                    <a
+                      href={channel.href}
+                      class="link-underline text-ink transition-colors hover:text-term"
+                      {...(channel.href.startsWith('http')
+                        ? { target: '_blank', rel: 'noopener noreferrer' }
+                        : {})}
+                    >
+                      {channel.value}
+                    </a>
+                  ) : (
+                    <span class="text-muted">{channel.value}</span>
+                  )}
+                </dd>
+              </div>
+            ))
+          }
+        </dl>
+      </TerminalWindow>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,16 @@
+---
+import { profile } from '../data/resume';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-edge px-6 py-8">
+  <div
+    class="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-3 font-mono text-xs text-faint"
+  >
+    <p>
+      <span class="text-term-dim">$</span> exit 0 — © {year} {profile.name}
+    </p>
+    <p>Built with Astro &amp; Tailwind · Deployed on GitHub Pages</p>
+  </div>
+</footer>
